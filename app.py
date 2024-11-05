@@ -19,7 +19,7 @@ server=app.server
 app.title="Dashboard financiero"
 
 #data a usar:
-df=pd.read_csv("/Users/mariajose/Documents/UFM/Octavo semestre/empresas.csv")
+df=pd.read_csv("empresas.csv")
 
 sales_list=["Total Revenues","Cost of Revenues","Gross Profit","Total Operating Expenses",
             "Operating Income","Net Income","Shares Outstanding","Close Stock Price",
@@ -99,7 +99,5 @@ def display_value(selected_stock,selected_numeric):
                                                     "color":"black"}]))
 
 #set server y correr el app
-
-#para github agregar el host
 if __name__=="__main__":
     app.run_server(debug=False,host="0.0.0.0",port=10000)
